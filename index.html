@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Convertidor Profesional de Vídeo a Imagen</title>
-    <!-- Favicon personalizado -->
     <link rel="icon" type="image/x-icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7ctNx201Nt_Y9lZ0kCT-OEXVww4dKKpcaskeUqgq4_elYgB2AVTUKefGubq1c1AKoOCbIN6U5qIysfnhtWHsGyqERhEF86ZFQuG3Z5oSJFSI_9cEnXGQpgfInFfuc-4JKKQ-_Upaz30H-z5KItKpPv5hGCq_0CzGP4Ey1IYYHuR2T48U7YXh-Sbiw3lg/s1600/favicom.png">
     <style>
         /* Variables de Color - Tema claro profesional */
@@ -49,6 +48,9 @@
         .sidebar {
             flex: 1;
             min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centra los anuncios */
         }
         
         #app {
@@ -280,6 +282,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            width: 100%; 
         }
         
         .ad-space h3 {
@@ -288,32 +291,33 @@
             margin-bottom: 15px;
             font-size: 1.2em;
         }
-        
-        .ad-placeholder {
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(135deg, #e9ecef 25%, #f8f9fa 25%, #f8f9fa 50%, #e9ecef 50%, #e9ecef 75%, #f8f9fa 75%, #f8f9fa);
-            background-size: 40px 40px;
-            border-radius: 8px;
+
+        /* Estilo especial para los contenedores de anuncios reales */
+        .ad-container-real {
+            margin-bottom: 25px;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: #6c757d;
-            font-weight: 500;
+            min-height: 250px;
+            width: 100%;
+            overflow: hidden; /* Evita que anuncios muy grandes rompan el diseño */
         }
         
-        .ad-placeholder i {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            color: var(--color-primary);
+        .info-box {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 4px solid var(--color-primary);
+            text-align: left;
         }
         
-        .ad-text {
-            font-size: 0.9em;
-            color: #6c757d;
-            margin-top: 15px;
-            max-width: 250px;
+        .info-box ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .info-box li {
+            margin-bottom: 8px;
         }
         
         /* Responsive */
@@ -325,12 +329,13 @@
             .sidebar {
                 min-width: 100%;
                 display: flex;
+                flex-direction: column;
+                align-items: center;
                 gap: 20px;
             }
             
             .ad-space {
-                flex: 1;
-                min-height: 200px;
+                max-width: 100%;
             }
         }
         
@@ -341,14 +346,6 @@
             
             #app {
                 padding: 25px 20px;
-            }
-            
-            .sidebar {
-                flex-direction: column;
-            }
-            
-            .ad-space {
-                min-height: 180px;
             }
             
             .video-container {
@@ -385,22 +382,6 @@
             font-size: 0.9em;
             color: #666;
             margin-top: 5px;
-        }
-        
-        .info-box {
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            padding: 20px;
-            border-left: 4px solid var(--color-primary);
-        }
-        
-        .info-box ul {
-            margin: 10px 0;
-            padding-left: 20px;
-        }
-        
-        .info-box li {
-            margin-bottom: 8px;
         }
         
         .file-input-label {
@@ -483,28 +464,28 @@
                 <canvas id="canvas-frame"></canvas>
                 
                 <div class="footer">
-                    Herramienta profesional desarrollada por <span>Josue Portillo</span>.
+                    Herramienta profesional desarrollada por <span>Zafiro Pixel</span>.
                 </div>
             </div>
         </div>
         
         <div class="sidebar">
-            <div class="ad-space">
-                <h3>Publicidad</h3>
-                <div class="ad-placeholder">
-                    <i>📷</i>
-                    <div>Espacio publicitario 1</div>
-                </div>
-                <p class="ad-text">Anúnciate aquí y llega a creadores de contenido</p>
+            <div class="ad-container-real">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '86d029e818ede7796ce6bd18df844087',
+                        'format' : 'iframe',
+                        'height' : 250,
+                        'width' : 300,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="https://www.highperformanceformat.com/86d029e818ede7796ce6bd18df844087/invoke.js"></script>
             </div>
             
-            <div class="ad-space">
-                <h3>Patrocinador</h3>
-                <div class="ad-placeholder">
-                    <i>💡</i>
-                    <div>Espacio publicitario 2</div>
-                </div>
-                <p class="ad-text">Tu mensaje podría aparecer aquí</p>
+            <div class="ad-container-real">
+                <script async="async" data-cfasync="false" src="https://pl28686407.effectivegatecpm.com/d2e25883dae5c990fc1b4d335caf4f06/invoke.js"></script>
+                <div id="container-d2e25883dae5c990fc1b4d335caf4f06"></div>
             </div>
             
             <div class="ad-space">
